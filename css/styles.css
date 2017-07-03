@@ -1,0 +1,248 @@
+/* Box Model */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Basic */
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+/* Typography */
+
+body {
+  color: #414f57;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 14pt;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1680px) {
+
+  body {
+    font-size: 11pt;
+  }
+    }
+
+@media screen and (max-width: 480px) {
+
+  body {
+    font-size: 10pt;
+    line-height: 1.75;
+  }
+}
+
+h1 {
+  font-size: 1.5em;
+  letter-spacing: 0.22em;
+  color: #313f47;
+  line-height: 1.5;
+  margin: 0 0 0.525em 0;
+}
+
+  @media screen and (max-width: 480px) {
+
+    h1 {
+      font-size: 1.65em;
+    }
+  }
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+/* Main */
+
+#main {
+  position: relative;
+  max-width: 100%;
+  min-width: 27em;
+  padding: 4.5em 3em 3em 3em;
+  background: #ffffff;
+  border-radius: 4px;
+  cursor: default;
+  opacity: 0.94;
+  text-align: center;
+}
+
+#main .avatar {
+  position: relative;
+  display: block;
+  margin-bottom: 2em;
+}
+
+#main .avatar img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.5em #ffffff;
+}
+
+#main .avatar:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -3em;
+  width: calc(100% + 6em);
+  height: 1px;
+  z-index: -1;
+  background: #c8cccf;
+}
+
+/* Icons */
+
+ul {
+  list-style: disc;
+  margin: 0 0 1.5em 0;
+  padding-left: 1em;
+  }
+
+ul li {
+  padding-left: 0.5em;
+}
+
+ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+  margin-top: -0.675em;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0.675em 0.5em;
+}
+
+ul.icons li a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 3.75em;
+  height: 3.75em;
+  border-radius: 100%;
+  border: solid 1px #c8cccf;
+  line-height: 3.75em;
+  overflow: hidden;
+  text-align: center;
+  text-indent: 3.75em;
+  white-space: nowrap;
+}
+
+ul.icons li a:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+}
+
+ul.icons li a:before {
+  color: #ffffff;
+  text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf;
+}
+
+ul.icons li a:hover:before {
+  text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
+}
+
+ul.icons li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  font-size: 1.85rem;
+  line-height: inherit;
+  text-align: center;
+  text-indent: 0;
+}
+
+ul.icons li a:hover {
+  border-color: #ff7496;
+}
+  @media screen and (max-width: 480px) {
+
+    ul.icons li a:before {
+      font-size: 1.5rem;
+    }
+  }
+
+/* Footer */
+
+#footer {
+  width: 100%;
+  padding: 1.5em 0 0 0;
+  color: #414f57;
+  cursor: default;
+  text-align: center;
+}
+
+#footer .copyright {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  list-style: none;
+}
+
+/* Wrapper */
+
+#wrapper {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  position: relative;
+  min-height: 100%;
+  padding: 1.5em;
+  z-index: 2;
+}
+
+#wrapper > * {
+  z-index: 1;
+}
+
+#wrapper:before {
+  content: '';
+  display: block;
+}
+
+@media screen and (max-width: 360px) {
+
+  #wrapper {
+    padding: 0.75em;
+  }
+ }
